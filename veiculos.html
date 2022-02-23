@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Mata tags Obrigatórias-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Cadastro de veiculos</title>
+        <style type="text/css">
+            body {
+                margin: 20px;
+                background-color: orangered;
+            }
+
+            h1 {
+                padding-top: 20px;
+                text-align: center;
+            }
+
+            h4 {
+                text-align: left;
+            }
+
+            hr {
+                padding-top: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <form class="needs-validation" novalidate>
+            
+            <div class='geral col-md-10'>
+                <h1>Cadastro de Veiculos</h1>
+                <hr>
+                <h4>Dados pessoais:</h4>
+                <!--PRIMEIRA LINHA - Dados Pessoais-->
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="validationCustomNome">Nome</label>
+                        <input type="text" class="form-control" id='validationCustomNome' placeholder="Nome e Sobrenome" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha nome e sobrenome do paciente ou responsável
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label for="validationCustomCpf">CPF</label>
+                        <input type="number" class="form-control" id='validationCustomCpf' placeholder="123.456.789-00" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o CPF do paciente ou responsável
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label for="validationCustomTelefone">Telefone</label>
+                        <input type="number" class="form-control" id='validationCustomTelefone' placeholder="(16)98765-4321" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o Telefone do paciente ou responsável
+                        </div>
+                    </div>
+                    <div class="form-group col-md-1 offset-md-1">
+                        <label for="validationCustomIdade">Idade</label>
+                        <input type="number" class="form-control" id='validationCustomIdade' placeholder="00" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha a idade do paciente.
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h4>Internação</h4>
+                <!--SEGUNDA LINHA - Dados de internação-->
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="validationCustomMedico">Médico</label>
+                        <input type="number" class="form-control" id='validationCustomMedico' placeholder="Dr. Fulano da Silva" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o nome do médico.
+                        </div>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label> Data </label>
+                        <input type="date" class="form-control" id="ndataInternação">
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label>Ala</label>
+                        <select class="form-control" id="estado"> 
+                            <option>Enfermaria</option>
+                            <option>Maternidade</option>
+                            <option>Pediatria</option>
+                            <option>Psiquiatria</option>
+                            <option>Centro Cirúrgico</option>
+                        </select>              
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label>Tipo quarto</label>
+                        <select class="form-control" id="estado"> 
+                            <option>Individual</option>
+                            <option>Duplo</option>
+                            <option>Triplo</option>
+                        </select>              
+                    </div>
+                    <div class="form-group col-md-1 offset-md-1">
+                        <label>Dieta Especial?</label>
+                        <select class="form-control" id="estado"> 
+                            <option>Não</option>
+                            <option>Sim</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-1 offset-md-1">
+                        <label>Acompanhante</label>
+                        <select class="form-control" id="estado"> 
+                            <option>Não</option>
+                            <option>Sim</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label> Observação </label>
+                        <input type="text" class="form-control" id="observacao" placeholder="Coloque aqui observações extras">
+                    </div>
+                </div>
+
+                <hr>
+                <h4>Medicamentos</h4>
+                <!--TERCEIRA LINHA - Dados de medicação-->
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label>Medicação Diária?</label>
+                        <select class="form-control" id="medicamento1"> 
+                            <option>Sim</option>
+                            <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-1 offset-md-1">
+                        <label>Meio:</label>
+                        <select class="form-control" id="medicamento1"> 
+                            <option>Oral</option>
+                            <option>Intravenosa</option>
+                            <option>Cutânea</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label>Tipo de medicação:</label>
+                        <select class="form-control" id="medicamento1"> 
+                            <option>Antibióticos</option>
+                            <option>Antialérgicos</option>
+                            <option>Soro</option>
+                            <option>Sedativo</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label>Exames</label>
+                        <select class="form-control" id="medicamento1"> 
+                            <option>Sangue</option>
+                            <option>Fezes</option>
+                            <option>Urina</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-1 offset-md-1">
+                        <label>Pesagem</label>
+                        <select class="form-control" id="medicamento1"> 
+                            <option>Sim</option>
+                            <option>Não</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Horário de medicação:</label>
+                        <input type="checkbox" id="horarioManha" value="manha">Manhã
+                        <input type="checkbox" id="horaniotarde" value="tarde">Tarde
+                        <input type="checkbox" id="horarioNoite" value="noite">Noite
+                        <input type="checkbox" id="horarioMadrugada" value="noite">Madrugada
+                    </div>
+                </div>
+                <hr>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+            
+            
+        <script>
+            // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                var forms = document.getElementsByClassName('needs-validation');
+                // Faz um loop neles e evita o envio
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+            </script>
+
+        <!--JavaScript (opicional)-->
+        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
