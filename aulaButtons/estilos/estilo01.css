@@ -1,0 +1,31 @@
+#principal {
+    margin: 15px;
+}
+
+#menu {
+    background-color: brown;
+}
+
+#menu ul {
+    padding: 20px;
+    list-style: none;
+    text-align: right;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    padding: 2px;
+    display: inline-block;
+    color:black;
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+    color: #6d6d6d;
+    font-weight: bold;
+    font-size: 18px;
+    color: blue;
+}
