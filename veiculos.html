@@ -12,7 +12,7 @@
         <style type="text/css">
             body {
                 margin: 20px;
-                background-color: orangered;
+                background-color: rgb(255, 255, 255);
             }
 
             h1 {
@@ -31,13 +31,30 @@
         </style>
     </head>
     <body>
-        
-        <form class="needs-validation" novalidate>
-            
-            <div class='geral col-md-10'>
-                <h1>Cadastro de Veiculos</h1>
-                <hr>
-                <h4>Dados pessoais:</h4>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <h1>Cadastro de veículos</h1>       
+            <div class="collapse navbar-collapse offset-md-1" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tipo
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Carro</a>
+                    <a class="dropdown-item" href="#">Moto</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Outros</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <br>
+        <form class="needs-validation" novalidate>         
+            <div class='geral col-md-12'>
+                <div class="alert alert-primary" role="alert">
+                    Dados do vendedor
+                </div>
                 <!--PRIMEIRA LINHA - Dados Pessoais-->
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -47,7 +64,7 @@
                             Tudo Certo!
                         </div>
                         <div class='invalid-feedback'>
-                            Por favor, preencha nome e sobrenome do paciente ou responsável
+                            Escreva o nome do vendedor
                         </div>
                     </div>
                     <div class="form-group col-md-2 offset-md-1">
@@ -57,143 +74,137 @@
                             Tudo Certo!
                         </div>
                         <div class='invalid-feedback'>
-                            Por favor, preencha o CPF do paciente ou responsável
+                            Por favor, preencha o CPF do vendedor
                         </div>
                     </div>
                     <div class="form-group col-md-2 offset-md-1">
                         <label for="validationCustomTelefone">Telefone</label>
+                        <input type="number" class="form-control" id='validationCustomTelefone' placeholder="(16)3721-4321" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o Telefone do vendedor
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="validationCustomTelefone">Celular</label>
                         <input type="number" class="form-control" id='validationCustomTelefone' placeholder="(16)98765-4321" required>
                         <div class='valid-feedback'>
                             Tudo Certo!
                         </div>
                         <div class='invalid-feedback'>
-                            Por favor, preencha o Telefone do paciente ou responsável
+                            Por favor, preencha o Telefone do vendedor
                         </div>
                     </div>
-                    <div class="form-group col-md-1 offset-md-1">
-                        <label for="validationCustomIdade">Idade</label>
-                        <input type="number" class="form-control" id='validationCustomIdade' placeholder="00" required>
+                </div>
+                <br>
+                <!--SEGUNDA LINHA - Dados ddo veículo-->
+                <div class="alert alert-primary" role="alert">
+                    Dados do veículo
+                    <div class="form-check form-check-inline col-md-1 offset-md-1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                        <label class="form-check-label" for="inlineRadio1">Carro</label>
+                      </div>
+                      <div class="form-check form-check-inline col-md-1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                        <label class="form-check-label" for="inlineRadio2">Moto</label>
+                      </div>
+                </div>
+                <div class="form-row col-md-12" id="dadosveiculo">
+                    <div class="form-group">
+                        <label for="validationMarca">Marca</label>
+                        <select class="form-control" id="validationMarca" required> 
+                            <option></option>
+                            <option>Ford</option>
+                            <option>Fiat</option>
+                            <option>Volksvagem</option>
+                            <option>Chevrolet</option>
+                            <option>Chevrolet</option>
+                            <option>Hyunday</option>
+                            <option>Toyota</option>
+                            <option>Chery</option>
+                            <option>Mitsubishi</option>
+                            <option>Jeep</option>
+                            <option>Mustang</option>
+                            <option>Jaguar</option>
+                            <option>Porshe</option>
+                            <option>Ferrari</option>
+                        </select>   
                         <div class='valid-feedback'>
                             Tudo Certo!
                         </div>
                         <div class='invalid-feedback'>
-                            Por favor, preencha a idade do paciente.
-                        </div>
+                            Por vavor, escolha a marca do carro
+                        </div>           
                     </div>
-                </div>
-                <hr>
-                <h4>Internação</h4>
-                <!--SEGUNDA LINHA - Dados de internação-->
-                <div class="form-row">
                     <div class="form-group col-md-3">
-                        <label for="validationCustomMedico">Médico</label>
-                        <input type="number" class="form-control" id='validationCustomMedico' placeholder="Dr. Fulano da Silva" required>
+                            <label for="validationModelo">Modelo</label>
+                            <input type="text" class="form-control" id='validationModelo' placeholder="Modelo do carro" required>
+                            <div class='valid-feedback'>
+                                Tudo Certo!
+                            </div>
+                            <div class='invalid-feedback'>
+                                Por favor, preencha o modelo do carro.
+                            </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="validationData" >Data de fabricação</label>
+                        <input type="date" class="form-control" id="validationData" required>
                         <div class='valid-feedback'>
                             Tudo Certo!
                         </div>
                         <div class='invalid-feedback'>
-                            Por favor, preencha o nome do médico.
+                            Por favor, preencha a data de fabricação
                         </div>
                     </div>
                     <div class="form-group col-md-1">
-                        <label> Data </label>
-                        <input type="date" class="form-control" id="ndataInternação">
-                    </div>
-                    <div class="form-group col-md-2 offset-md-1">
-                        <label>Ala</label>
-                        <select class="form-control" id="estado"> 
-                            <option>Enfermaria</option>
-                            <option>Maternidade</option>
-                            <option>Pediatria</option>
-                            <option>Psiquiatria</option>
-                            <option>Centro Cirúrgico</option>
-                        </select>              
-                    </div>
-                    <div class="form-group col-md-1">
-                        <label>Tipo quarto</label>
-                        <select class="form-control" id="estado"> 
-                            <option>Individual</option>
-                            <option>Duplo</option>
-                            <option>Triplo</option>
-                        </select>              
-                    </div>
-                    <div class="form-group col-md-1 offset-md-1">
-                        <label>Dieta Especial?</label>
-                        <select class="form-control" id="estado"> 
-                            <option>Não</option>
+                        <label  for="validationNacional">Nacional</label>
+                        <select class="form-control" id="validationNacional" required> 
+                            <option></option>
                             <option>Sim</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-1 offset-md-1">
-                        <label>Acompanhante</label>
-                        <select class="form-control" id="estado"> 
                             <option>Não</option>
-                            <option>Sim</option>
-                        </select>
+                        </select>     
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, indique se o carro é nacional ou importado
+                        </div>         
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="validationValor">Valor</label>     
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">R$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="validationValor" id = "validationValor" placeholder="00.000" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o valor.
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label> Observação </label>
-                        <input type="text" class="form-control" id="observacao" placeholder="Coloque aqui observações extras">
-                    </div>
+                <div class="form-group col-md-12">
+                    <label> Observação </label>
+                    <input type="text" class="form-control" id="observacao" placeholder="Coloque aqui observações extras">
                 </div>
-
-                <hr>
-                <h4>Medicamentos</h4>
-                <!--TERCEIRA LINHA - Dados de medicação-->
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label>Medicação Diária?</label>
-                        <select class="form-control" id="medicamento1"> 
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Enviar foto</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
                     </div>
-                    <div class="form-group col-md-1 offset-md-1">
-                        <label>Meio:</label>
-                        <select class="form-control" id="medicamento1"> 
-                            <option>Oral</option>
-                            <option>Intravenosa</option>
-                            <option>Cutânea</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2 offset-md-1">
-                        <label>Tipo de medicação:</label>
-                        <select class="form-control" id="medicamento1"> 
-                            <option>Antibióticos</option>
-                            <option>Antialérgicos</option>
-                            <option>Soro</option>
-                            <option>Sedativo</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2 offset-md-1">
-                        <label>Exames</label>
-                        <select class="form-control" id="medicamento1"> 
-                            <option>Sangue</option>
-                            <option>Fezes</option>
-                            <option>Urina</option>
-                            <option>Outros</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-1 offset-md-1">
-                        <label>Pesagem</label>
-                        <select class="form-control" id="medicamento1"> 
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label>Horário de medicação:</label>
-                        <input type="checkbox" id="horarioManha" value="manha">Manhã
-                        <input type="checkbox" id="horaniotarde" value="tarde">Tarde
-                        <input type="checkbox" id="horarioNoite" value="noite">Noite
-                        <input type="checkbox" id="horarioMadrugada" value="noite">Madrugada
-                    </div>
-                </div>
-                <hr>
-                <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>
             </div>
+            
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+            <button type="button" class="btn btn-danger">Cancelar</button>
+
         </form>
             
             
