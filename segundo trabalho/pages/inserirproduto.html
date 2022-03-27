@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px;
+            color: orange;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            border: 35px;
+            padding: 25px;
+        }
+
+        body {
+            background-color: #efdbc4;
+        }
+
+        label {
+            text-align: left;
+        }
+
+
+        button {
+            border-radius: 60px;
+            color: white;
+        }
+
+
+        #alerta {
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: orange;
+            margin: 30px;
+        }
+
+        #loguin {
+            position: fixed;
+            align-items: center;
+        }
+
+        #center {
+            background-color: orange;
+            border-radius: 15px;
+            border-color: orange;
+            border: solid;
+            padding: 25px;
+            margin: auto;
+
+        }
+
+        #buttons {
+            margin: auto;
+        }
+    </style>
+    <title>Inserir Produto</title>
+</head>
+
+<body>
+    <div class="alert alert-warning" role="alert" id="alerta">
+        Gerenciamento do evento
+    </div>
+
+    <form class="needs-validation" novalidate id="login">
+        <div class='geral col-md-5' id="center">
+            <h2>Inserir Produto</h2>
+            <!--PRIMEIRA LINHA - Nome do Ponto de venda-->
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomVenda" class="col-sm-4 col-form-label">Nome do ponto de venda</label>
+                    <div class="form-group col-sm-8 col-form-label">
+                        <input type="text" class="form-control col-sm-12" id='validationCustomVenda' placeholder="Nome do Ponto de venda" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Escreva o nome do ponto de venda
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomProduto" class="col-sm-3 col-form-label">Nome do produto</label>
+                    <div class="form-group col-sm-9 col-form-label">
+                        <input type="text" class="form-control col-sm-12" id='validationCustomProduto' placeholder="Nome do Produto"
+                            required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Escreva o nome do produto
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomIngredientes" class="col-sm-2 col-form-label">Ingredientes</label>
+                    <div class="form-group col-sm-10 col-form-label">
+                        <input type="text" class="form-control col-sm-12" id='validationCustomIngredientes' placeholder="Ingredientes"
+                            required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Escreva os ingredientes
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomPreparo" class="col-sm-3 col-form-label">Tempo de preparo</label>
+                    <div class="form-group col-sm-9 col-form-label">
+                        <input type="text" class="form-control col-sm-12" id='validationCustomPreparo' placeholder="Tempo de preparo"
+                            required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Escreva o tempo de praparo
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomValor" class="col-sm-1 col-form-label">Valor:</label>
+                    <div class="form-group col-sm-4 col-form-label">
+                        <input type="text" class="form-control col-sm-12" id='validationCustomValor' placeholder="R$00,00"
+                            required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Escreva o valor
+                        </div>
+                    </div>
+                    <label for="validationCustomValor" class="col-sm-1 col-form-label">Foto:</label>
+                    <div class="form-group col-sm-6 col-form-label">
+                        <input type="file" class="input-group-text col-sm-12" id='validationCustomValor' required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Selecionar arquivo de foto
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </form>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+    </form>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <script>
+        // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                var forms = document.getElementsByClassName('needs-validation');
+                // Faz um loop neles e evita o envio
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

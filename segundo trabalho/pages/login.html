@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px;
+            color: orange;
+        }
+
+        body {
+            background-color: #efdbc4;
+        }
+
+        label{
+            align-items: auto;
+            align-self: auto;
+            text-align: left;
+        }
+
+        button{
+            border-radius: 60px;
+            color: white;
+        }
+        
+
+
+        #alerta {
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: orange;
+            margin: 30px;
+        }
+        #loguin{
+            position: fixed;
+            align-items: center;
+        }
+
+        #center{
+            background-color: orange;
+            border-radius: 15px;
+            border-color: orange;
+            border: solid;
+            padding: 25px;
+            margin: auto;
+            margin-top: 150px;
+            
+        }
+
+        #buttons{
+            margin: auto;
+        }
+
+    </style>
+    <title>Rolê</title>
+</head>
+
+<body>
+    <div class="alert alert-warning" role="alert" id="alerta">
+        Rolê
+    </div>
+
+    <form class="needs-validation" novalidate id="login">
+        <div class='geral col-md-3' id="center">
+            <!--PRIMEIRA LINHA - Dados Pessoais-->
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomNome" class="col-sm-3 col-form-label">Login</label>
+                    <input type="text" class="form-control col-sm-9" id='validationCustomNome' placeholder="Nome"
+                        required>
+                    <div class='valid-feedback'>
+                        Tudo Certo!
+                    </div>
+                    <div class='invalid-feedback'>
+                        Escreva o seu login
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="form-group row">
+                    <label for="validationCustomSenha" class="col-sm-3 col-form-label">Senha</label>
+                    <input type="password" class="form-control col-sm-9" id='validationCustomSenha' placeholder="***************"
+                        required>
+                    <div class='valid-feedback'>
+                        Tudo Certo!
+                    </div>
+                    <div class='invalid-feedback'>
+                        Escreva a sua senha
+                    </div>
+                </div>
+            </div>
+    </form>
+
+    <button href='../index.html' type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+    </form>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <script>
+        // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                var forms = document.getElementsByClassName('needs-validation');
+                // Faz um loop neles e evita o envio
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

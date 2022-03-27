@@ -39,6 +39,164 @@
             </div>
         </div>
 
+
+        <form class="needs-validation" novalidate>         
+            <div class='geral col-md-12'>
+                <div class="alert alert-primary" role="alert">
+                    Dados do vendedor
+                </div>
+                <!--PRIMEIRA LINHA - Dados Pessoais-->
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="validationCustomNome">Nome</label>
+                        <input type="text" class="form-control" id='validationCustomNome' placeholder="Nome e Sobrenome" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Escreva o nome do vendedor
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label for="validationCustomCpf">CPF</label>
+                        <input type="number" class="form-control" id='validationCustomCpf' placeholder="123.456.789-00" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o CPF do vendedor
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2 offset-md-1">
+                        <label for="validationCustomTelefone">Telefone</label>
+                        <input type="number" class="form-control" id='validationCustomTelefone' placeholder="(16)3721-4321" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o Telefone do vendedor
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="validationCustomTelefone">Celular</label>
+                        <input type="number" class="form-control" id='validationCustomTelefone' placeholder="(16)98765-4321" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o Telefone do vendedor
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--SEGUNDA LINHA - Dados ddo veículo-->
+                <div class="alert alert-primary" role="alert">
+                    Dados do veículo
+                    <div class="form-check form-check-inline col-md-1 offset-md-1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                        <label class="form-check-label" for="inlineRadio1">Carro</label>
+                      </div>
+                      <div class="form-check form-check-inline col-md-1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                        <label class="form-check-label" for="inlineRadio2">Moto</label>
+                      </div>
+                </div>
+                <div class="form-row col-md-12" id="dadosveiculo">
+                    <div class="form-group">
+                        <label for="validationMarca">Marca</label>
+                        <select class="form-control" id="validationMarca" required> 
+                            <option></option>
+                            <option>Ford</option>
+                            <option>Fiat</option>
+                            <option>Volksvagem</option>
+                            <option>Chevrolet</option>
+                            <option>Chevrolet</option>
+                            <option>Hyunday</option>
+                            <option>Toyota</option>
+                            <option>Chery</option>
+                            <option>Mitsubishi</option>
+                            <option>Jeep</option>
+                            <option>Mustang</option>
+                            <option>Jaguar</option>
+                            <option>Porshe</option>
+                            <option>Ferrari</option>
+                        </select>   
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por vavor, escolha a marca do carro
+                        </div>           
+                    </div>
+                    <div class="form-group col-md-3">
+                            <label for="validationModelo">Modelo</label>
+                            <input type="text" class="form-control" id='validationModelo' placeholder="Modelo do carro" required>
+                            <div class='valid-feedback'>
+                                Tudo Certo!
+                            </div>
+                            <div class='invalid-feedback'>
+                                Por favor, preencha o modelo do carro.
+                            </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="validationData" >Data de fabricação</label>
+                        <input type="date" class="form-control" id="validationData" required>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha a data de fabricação
+                        </div>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label  for="validationNacional">Nacional</label>
+                        <select class="form-control" id="validationNacional" required> 
+                            <option></option>
+                            <option>Sim</option>
+                            <option>Não</option>
+                        </select>     
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, indique se o carro é nacional ou importado
+                        </div>         
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="validationValor">Valor</label>     
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">R$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="validationValor" id = "validationValor" placeholder="00.000" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                        <div class='valid-feedback'>
+                            Tudo Certo!
+                        </div>
+                        <div class='invalid-feedback'>
+                            Por favor, preencha o valor.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label> Observação </label>
+                    <input type="text" class="form-control" id="observacao" placeholder="Coloque aqui observações extras">
+                </div>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Enviar foto</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                </form>
+            </div>
+            
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+            <button type="button" class="btn btn-danger">Cancelar</button>
+
+        </form>
+
         <!--  segunda linha -->
         <div class="form-row">
             <div class="form-group col-md-5">

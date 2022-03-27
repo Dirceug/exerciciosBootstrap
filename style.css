@@ -1,0 +1,22 @@
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    color: orange;
+}
+
+body{
+    background-color: #efdbc4;
+}
+
+#alerta{
+    text-transform: uppercase;
+    color: black;
+
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: orange;
+}
+
